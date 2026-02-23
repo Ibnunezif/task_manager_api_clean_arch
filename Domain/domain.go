@@ -3,11 +3,11 @@ package Domain
 import "time"
 
 type Task struct {
-	ID          string    `json:"id"`
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	Status      string    `json:"status"`
-	DueDate     time.Time `json:"due_date"`
+	ID          string    
+	Title       string    
+	Description string    
+	Status      string    
+	DueDate     time.Time 
 }
 
 // Constructor
@@ -32,45 +32,6 @@ func (t *Task) Update(title, description, status string) {
 		t.Status = status
 	}
 }
-
-// ------------------- TASK -------------------
-// type Task struct {
-// 	id          string
-// 	title       string
-// 	description string
-// 	status      string
-// }
-
-// func NewTask(id, title, description string) *Task {
-// 	return &Task{
-// 		id:          id,
-// 		title:       title,
-// 		description: description,
-// 		status:      "pending",
-// 	}
-// }
-
-// Getters
-// func (t *Task) ID() string          { return t.id }
-// func (t *Task) Title() string       { return t.title }
-// func (t *Task) Description() string { return t.description }
-// func (t *Task) Status() string      { return t.status }
-
-// // Setters
-// func (t *Task) SetID(id string) { t.id = id }
-
-// Update
-// func (t *Task) Update(title, description, status string) {
-// 	if title != "" {
-// 		t.title = title
-// 	}
-// 	if description != "" {
-// 		t.description = description
-// 	}
-// 	if status != "" {
-// 		t.status = status
-// 	}
-// }
 
 // ------------------- USER -------------------
 type User struct {
